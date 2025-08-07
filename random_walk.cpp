@@ -71,7 +71,7 @@ void walker_process()
     {
         int move = (rand() % 2 == 0) ? -1 : 1;
         walker_pos += move;
-        if (walker_pos < -domain_size || walker_pos > domain_size || step == max_steps - 1))
+        if (walker_pos < -domain_size || walker_pos > domain_size || step == max_steps - 1)
         {
             std::cout << "Rank " << world_rank << ": Walker finished in" << step + 1 << " steps." << std::endl;
             int completion_message = step + 1;
