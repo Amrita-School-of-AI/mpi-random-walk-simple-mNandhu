@@ -75,7 +75,7 @@ void walker_process()
         {
             std::cout << "Rank " << world_rank << ": Walker finished in" << step + 1 << " steps." << std::endl;
             int completion_message = step + 1;
-            MPV_Send(&completion_message, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
+            MPI_Send(&completion_message, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
             break;
         }
     }
